@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"Module that fetches https://alx-intranet.hbtn.io/status"
+"python script that fetches https://alx-intranet.hbtn.io/status"
 import urllib.request
 
 
