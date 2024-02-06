@@ -1,10 +1,11 @@
 #!/usr/bin/node
 const request = require('request');
+const url = process.argv[2];
 
-if (process.argv.length > 2) {
-  request
-    .get(process.argv[2])
-    .on('response', response => {
-      console.log(`code: ${response.statusCode}`);
-    });
-}
+request.get(url, function (err, url) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log('code: ' + url.statusCode);
+  }
+});
